@@ -811,6 +811,10 @@ footer {
         z-index: 2000;
     }
 
+    .nav-menu a {
+        color: var(--primary);
+    }
+
     .header-container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
