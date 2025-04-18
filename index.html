@@ -350,6 +350,7 @@
         
         // Transparent Header on Scroll
         const header = document.getElementById('header');
+        const links = document.querySelectorAll('.nav-menu li a');
         
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
@@ -365,6 +366,17 @@
         } else {
             header.classList.add('transparent');
         }
+
+        function updateHeader() {
+        if (window.scrollY > 100) {
+            links.forEach(link => link.classList.remove('warnain'));
+        } else {
+            links.forEach(link => link.classList.add('warnain'));
+            }
+        }
+
+        window.addEventListener('scroll', updateHeader);
+        updateHeader();
         
         // Back to Top Button
         const backToTop = document.querySelector('.back-to-top');
